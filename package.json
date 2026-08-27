@@ -4,7 +4,7 @@
   "description": "Local HTTP load generator for the traceOn Chrome extension's Load Test — a Chrome Native Messaging host.",
   "type": "module",
   "license": "MIT",
-  "author": "solomon-mh <solomonmuhye12@gmail.com>",
+  "author": "solomon-mh <solomon.muhye.wd@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/solomon-mh/traceon-loadrunner.git"
