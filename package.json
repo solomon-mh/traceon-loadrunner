@@ -1,0 +1,50 @@
+{
+  "name": "traceon-loadrunner",
+  "version": "0.1.0",
+  "description": "Local HTTP load generator for the traceOn Chrome extension's Load Test — a Chrome Native Messaging host.",
+  "type": "module",
+  "license": "MIT",
+  "author": "solomon-mh <solomonmuhye12@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solomon-mh/traceon-loadrunner.git"
+  },
+  "homepage": "https://github.com/solomon-mh/traceon-loadrunner#readme",
+  "bugs": "https://github.com/solomon-mh/traceon-loadrunner/issues",
+  "keywords": [
+    "chrome-extension",
+    "native-messaging",
+    "load-testing",
+    "traceon"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "traceon-loadrunner": "./dist/install.js"
+  },
+  "exports": {
+    "./protocol": {
+      "types": "./dist/protocol.d.ts",
+      "default": "./dist/protocol.js"
+    }
+  },
+  "files": [
+    "dist/install.js",
+    "dist/host.js",
+    "dist/protocol.js",
+    "dist/protocol.d.ts"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build": "node scripts/build.mjs",
+    "test": "npm run build && vitest run",
+    "prepublishOnly": "npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "esbuild": "^0.21.5",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}
