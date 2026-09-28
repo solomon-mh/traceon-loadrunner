@@ -21,7 +21,7 @@
     "node": ">=18"
   },
   "bin": {
-    "traceon-loadrunner": "./dist/install.js"
+    "traceon-loadrunner": "dist/install.js"
   },
   "exports": {
     "./protocol": {
